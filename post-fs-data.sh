@@ -34,6 +34,6 @@ resetprop -n 2606:4700:4700::1001
 
 if [ -a /system/etc/resolv.conf ]; then
 	mkdir -p $MODDIR/system/etc/
-	printf "nameserver 1.1.1.1\nnameserver 1.0.0.1" >> $MODDIR/system/etc/resolv.conf
+	printf "2606:4700:4700::1111\n2606:4700:4700::1001" >> $MODDIR/system/etc/resolv.conf
 	chmod 644 $MODDIR/system/etc/resolv.conf
 fi
